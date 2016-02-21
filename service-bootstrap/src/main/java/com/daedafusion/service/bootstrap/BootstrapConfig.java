@@ -27,9 +27,9 @@ public class BootstrapConfig implements Bootstrap
     }
 
     /**
-     * name.properties => By default assumes to find in classpath
-     * classpath:name.properties => Loads from classpath
-     * file:///var/lib/name.properties => Loads from filesystem
+     * name.properties :: By default assumes to find in classpath
+     * classpath:name.properties :: Loads from classpath
+     * file:///var/lib/name.properties :: Loads from filesystem
      *
      * @param bootstrapFile
      */
