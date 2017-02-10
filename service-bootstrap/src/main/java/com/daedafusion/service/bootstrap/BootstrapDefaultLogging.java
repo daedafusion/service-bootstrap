@@ -31,6 +31,7 @@ public class BootstrapDefaultLogging implements Bootstrap
             p.put("log.dir", Configuration.getInstance().getString("log.dir", "/var/log/argos"));
             p.put("log.name", Configuration.getInstance().getString("log.name", "info.log"));
             p.put("serviceName", Configuration.getInstance().getString("serviceName", "unknown"));
+            p.put("log.level", Configuration.getInstance().getString("log.level", "INFO"));
 
             // TODO when you have multiple instances of a service, need to add a tag indicating which instance (hostname?)
 
