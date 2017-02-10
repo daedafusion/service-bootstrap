@@ -4,6 +4,7 @@ import com.daedafusion.crypto.Crypto;
 import com.daedafusion.crypto.CryptoFactory;
 import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.*;
+import org.eclipse.jetty.server.handler.ErrorHandler;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -74,6 +75,13 @@ public class JettyServerBuilder
     public JettyServerBuilder addListener(EventListener listener)
     {
         context.addEventListener(listener);
+
+        return this;
+    }
+
+    public JettyServerBuilder setErrorHandler(ErrorHandler eh)
+    {
+        context.setErrorHandler(eh);
 
         return this;
     }
